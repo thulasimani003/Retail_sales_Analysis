@@ -1,16 +1,16 @@
- Retail Sales Analysis - SQL Project
+# Retail Sales Analysis - SQL Project
 
- Project Overview
+## Project Overview
 This project focuses on analyzing retail sales data using SQL. It involves database setup, data exploration, cleaning, and performing various analytical queries to gain insights into sales trends, customer behavior, and business performance.
 
- Database Setup
-1. Create Database
+## Database Setup
+1. **Create Database**
    ```sql
    CREATE DATABASE Retail_sales_Analysis;
    USE Retail_sales_Analysis;
    ```
 
-2. Create Table
+2. **Create Table**
    ```sql
    CREATE TABLE retail_sales(
        transactions_id INT PRIMARY KEY,
@@ -27,8 +27,8 @@ This project focuses on analyzing retail sales data using SQL. It involves datab
    );
    ```
 
-Data Exploration & Cleaning
-- Total sales count:
+## Data Exploration & Cleaning
+- **Total sales count:**
   ```sql
   SELECT COUNT(*) AS Total_sales FROM retail_sales;
   ```
@@ -99,11 +99,11 @@ Data Exploration & Cleaning
    SELECT customer_id, SUM(total_sale) AS Total_sales FROM retail_sales
    GROUP BY customer_id ORDER BY Total_sales DESC LIMIT 5;
    ```
-9. Number of unique customers per category
+9. **Number of unique customers per category**
    ```sql
    SELECT category, COUNT(DISTINCT customer_id) AS total_customers FROM retail_sales GROUP BY category;
    ```
-10. Order count by shift (Morning, Afternoon, Evening)
+10. **Order count by shift (Morning, Afternoon, Evening)**
     ```sql
     WITH hourly_sales AS (
         SELECT *,
@@ -117,19 +117,19 @@ Data Exploration & Cleaning
     SELECT shift, COUNT(*) AS total_orders FROM hourly_sales GROUP BY shift;
     ```
 
- Technologies Used
-- Database: MySQL
-- Query Language: SQL
-- Tool: MySQL Workbench
+## Technologies Used
+- **Database:** MySQL
+- **Query Language:** SQL
+- **Tool:** MySQL Workbench
 
-
- Future Improvements
-- Implement stored procedures for automation.
-- Use Power BI or Tableau for visualization.
-- Optimize queries for better performance.
+## Future Improvements
+- Implement **stored procedures** for automation.
+- Use **Power BI or Tableau** for visualization.
+- Optimize queries for **better performance**.
 
 ---
-📌 Author: Thulasimani V  
-📧 Contact: thulasiv658@gmail.com 
-🌟 GitHub: 
+📌 **Author:** Thulasimani V 
+📧 **Contact:** thulasiv658@gmail.com 
+🌟 **GitHub:**  https://github.com/thulasimani003
+
 
